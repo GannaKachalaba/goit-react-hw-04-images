@@ -55,7 +55,9 @@ const App = () => {
   }, [query, page, error]);
 
   const getSearchRequest = query => {
-    setQuery(query, images, page);
+    setQuery(query);
+    setImages([]);
+    setPage(1);
   };
 
   const onNextFetch = () => {
